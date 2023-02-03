@@ -1,7 +1,119 @@
+body {
+  color: white;
+}
 .hidden {
   display: none;
 }
-.flex {
+#weather {
+  position: fixed;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#weather > span:first-child {
+  font-size: 30px;
+  display: block;
+}
+.container {
+  height: calc(100vh - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login-form {
+  display: flex;
+  flex-direction: column;
+}
+#login-form input {
+  width: 50rem;
+  height: 6rem;
+  border: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 5rem;
+}
+#login-form input::placeholder {
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+}
+#login-form input:focus {
+  outline: none;
+}
+#quote {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#clock {
+  font-size: 8rem;
+  margin: 0;
+}
+#todo-form > input {
+  width: 20rem;
+  height: 2.2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 3rem;
+  border: none;
+}
+#todo-form > input:focus {
+  outline: none;
+}
+#todo-list {
+  margin-top: 30px;
+  background-color: rgba(122, 122, 122, 0.7);
+  padding: 10px 10px 10px 16px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+#todo-list > li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#todo-list > li:last-child {
+  margin-bottom: 0;
+}
+#todo-list > li > button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+.main-focus-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-focus-container > span {
+  font-size: 1.5rem;
+}
+.main-focus-container > div:last-child {
+  font-size: 2rem;
+}
+.main-focus > input {
+  width: 24rem;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  background: none;
+  color: white;
+  border-bottom: 3px solid white;
+}
+.main-focus > input:focus {
+  outline: none;
+}
+#main-focus-div {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+#main-focus-div > input {
+  margin-right: 20px;
+  transform: scale(2.5);
 }
