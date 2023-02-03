@@ -15,6 +15,7 @@ function deleteToDo(event) {
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos();
+  console.log(toDos);
 }
 
 function paintToDo(newToDo) {
@@ -31,6 +32,7 @@ function paintToDo(newToDo) {
 }
 
 function handleToDoSubmit(event) {
+  toDoList.classList.remove("hidden");
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
@@ -46,9 +48,13 @@ function handleToDoSubmit(event) {
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
+console.log(savedToDos);
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach((item) => paintToDo(item));
+  if (savedToDos !== "[]") {
+    toDoList.classList.remove("hidden");
+  }
 }
