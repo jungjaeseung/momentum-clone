@@ -12,11 +12,12 @@ let greet = "";
 function setGreet() {
   const date = new Date();
   const hours = date.getHours();
-  if (hours > 7 && hours < 12) {
+  console.log(hours);
+  if (hours >= 7 && hours < 12) {
     greet = "Good morning";
-  } else if (hours > 12 && hours < 17) {
+  } else if (hours >= 12 && hours < 17) {
     greet = "Good afternoon";
-  } else if (hours > 17 && hours < 22) {
+  } else if (hours >= 17 && hours < 22) {
     greet = "Good evening";
   } else {
     greet = "Good night";
